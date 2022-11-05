@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.App form {
+  width: max-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.App form div {
+  align-self: center;
+}
+.App form div input.invalid:invalid:focus + span {
+  visibility: visible;
+}
+.App form div input.invalid:invalid:focus {
+  outline-color: red;
+}
+
+.App form div input + span {
+  color: red;
+  visibility: hidden;
+  display: block;
+}
+
+input {
+  width: 300px;
+  padding: 10px;
+  font-size: 1.1rem;
+  box-shadow: 0px -1px 5px #9f9f9f;
+  background-color: #f2f2f2;
+  border: none;
+}
+button {
+  font-size: 1.2rem;
+  padding: 5px 40px;
+  box-shadow: 0px -1px 5px #9f9f9f;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:not([disabled]):hover {
+  box-shadow: 0px -1px 3px #9f9f9f;
+}
